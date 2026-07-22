@@ -1,0 +1,42 @@
+# ── Web framework ──────────────────────────────────────────────────────────
+fastapi==0.111.0
+uvicorn==0.30.1
+python-multipart==0.0.9
+pydantic>=2.0.0
+
+# ── Core ML ────────────────────────────────────────────────────────────────
+torch>=2.1.0
+torchvision>=0.16.0
+
+# ── HuggingFace ────────────────────────────────────────────────────────────
+# Loads: openai/clip-vit-large-patch14 (~1.7 GB)
+#        dima806/deepfake_vs_real_image_detection (~350 MB)
+#        Falconsai/nsfw_image_detection (~90 MB)
+transformers>=4.40.0
+accelerate>=0.27.0
+
+# ── Image processing ───────────────────────────────────────────────────────
+Pillow>=10.0.0
+numpy>=1.24.0
+scipy>=1.10.0         # used by artifact_model edge coherence (ndimage.convolve)
+
+# ── Web / search ───────────────────────────────────────────────────────────
+requests>=2.31.0
+httpx>=0.27.0
+beautifulsoup4>=4.12.0
+lxml>=5.0.0
+
+# ── Perceptual hash verification (OSINT leak matching) ─────────────────────
+imagehash>=4.3.0              # pHash, aHash, dHash for image verification
+
+# ── Computer Vision ────────────────────────────────────────────────────────
+opencv-python-headless>=4.8.0  # face_analysis texture; headless = no GUI dep
+
+# ── OCR (text anomaly detection) ───────────────────────────────────────────
+pytesseract>=0.3.10            # requires Tesseract binary: https://github.com/UB-Mannheim/tesseract/wiki
+
+# ── Face mesh (face geometry consistency) ──────────────────────────────────
+mediapipe>=0.10.0
+
+# ── Utilities ──────────────────────────────────────────────────────────────
+python-dotenv>=1.0.0

@@ -1,0 +1,129 @@
+/* ─── Loader Screen ──────────────────────────────────────────────────────── */
+.loader-screen {
+  position: fixed;
+  inset: 0;
+  background: #0a0a0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: loaderFadeIn 0.3s ease-out forwards;
+}
+
+.loader-screen.fade-out {
+  animation: loaderFadeOut 0.5s ease-out forwards;
+}
+
+@keyframes loaderFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes loaderFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.loader-container {
+  position: relative;
+  text-align: center;
+  z-index: 10;
+}
+
+.loader-content {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.loader-logo {
+  margin-bottom: 32px;
+  color: #cfcfcf;
+  display: inline-block;
+  opacity: 0.9;
+  animation: loaderPulse 2s ease-in-out infinite;
+}
+
+.loader-logo svg {
+  display: block;
+}
+
+@keyframes loaderPulse {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+.loader-title {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 44px;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+}
+
+.loader-subtitle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0 0 28px;
+  font-weight: 500;
+}
+
+.loader-progress-bar {
+  width: 280px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 1px;
+  margin: 24px auto;
+  overflow: hidden;
+}
+
+.loader-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #cfcfcf 0%, rgba(207, 207, 207, 0.6) 100%);
+  border-radius: 1px;
+  width: 0;
+  transition: width 0.15s linear;
+  box-shadow: 0 0 12px rgba(207, 207, 207, 0.2);
+}
+
+.loader-status {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.3);
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Grid Background */
+.loader-grid {
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 52px 52px;
+  pointer-events: none;
+  z-index: 1;
+}
