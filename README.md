@@ -2,11 +2,20 @@
 
 > AI-Powered Deepfake Detection • Leak Intelligence • Automated Legal Response
 
+<p align="center">
+  <img src="https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white" />
+  <img src="https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white" />
+  <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white" />
+  <img src="https://img.shields.io/badge/AI-Powered-red" />
+  <img src="https://img.shields.io/badge/Hackathon%20Project-Orange" />
+</p>
+
 ---
 
 ## 📖 Overview
 
-DeepShield is an AI-powered cybersecurity platform that protects users from deepfakes, AI-generated explicit content, identity misuse, and image leaks.
+DeepShield is an AI-powered cybersecurity platform designed to protect users from deepfakes, AI-generated explicit content, identity misuse, and image leaks.
 
 It combines AI-powered image forensics, reverse image intelligence, perceptual hashing, threat analysis, and automated legal response into one unified platform.
 
@@ -18,7 +27,7 @@ It combines AI-powered image forensics, reverse image intelligence, perceptual h
 - 🚨 NSFW AI Content Detection
 - 🌐 Reverse Image & Leak Detection
 - 🧠 AI Threat Assessment
-- ⚖️ DMCA & Legal Document Generation
+- ⚖️ Automated Legal Response
 - 👮 Police Complaint Generator
 - 🛡️ Continuous Monitoring Dashboard
 - 🔐 Privacy-First Architecture
@@ -31,7 +40,7 @@ It combines AI-powered image forensics, reverse image intelligence, perceptual h
 
 - Vision Transformer (ViT) based analysis
 - AI-generated image detection
-- Authenticity verification
+- Image authenticity verification
 - Confidence scoring
 
 ### 🚨 NSFW Detection
@@ -47,9 +56,9 @@ It combines AI-powered image forensics, reverse image intelligence, perceptual h
 - Perceptual hash verification
 - Leak source identification
 
-### 🧠 Situation Assessment
+### 🧠 Threat Assessment
 
-Describe any incident and DeepShield generates:
+Describe any incident and DeepShield automatically generates:
 
 - Threat Level
 - Risk Score
@@ -112,25 +121,44 @@ Generate professional legal documents including:
 
 ### Home Page
 
-(Add screenshots here)
+> Add your screenshot here.
 
 ### Threat Assessment Dashboard
 
-(Add screenshots here)
+> Add your screenshot here.
 
 ### Legal Toolkit
 
-(Add screenshots here)
+> Add your screenshot here.
+
+### Leak Intelligence Module
+
+> Add your screenshot here.
 
 ---
 
 ## 🛡️ Use Cases
 
-- Detect deepfake and manipulated images.
-- Identify leaked or misused content online.
+DeepShield can help users to:
+
+- Detect manipulated and AI-generated images.
+- Identify leaked or misused content.
 - Generate legal documents for reporting incidents.
-- Assess threats and receive AI-powered recommendations.
+- Receive AI-powered threat assessments.
 - Monitor sensitive images securely.
+- Protect digital identity and privacy.
+
+---
+
+## 🔄 How It Works
+
+1. Upload an image or describe an incident.
+2. DeepShield analyzes the content using AI models.
+3. The platform performs threat and risk assessment.
+4. Leak intelligence and image analysis are generated.
+5. Legal recommendations are provided.
+6. Users can generate legal documents and reports.
+7. Continuous monitoring keeps users informed of potential threats.
 
 ---
 
@@ -143,14 +171,19 @@ Generate professional legal documents including:
 
 ## 🚀 Future Scope
 
-- Real-time web monitoring
-- Multilingual legal assistance
-- Cloud deployment
-- Mobile application support
-- Advanced AI models for detection
+- Real-time web monitoring.
+- Multilingual legal assistance.
+- Cloud deployment.
+- Mobile application support.
+- Advanced deepfake detection models.
+- AI-powered cybercrime reporting.
 
 ---
 
 ## 📄 License
 
 This project was developed as a hackathon project for educational and research purposes.
+
+---
+
+### Built with ❤️ to fight Deepfakes and protect Digital Privacy.
