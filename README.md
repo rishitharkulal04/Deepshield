@@ -129,4 +129,4 @@ Models fail to download: check internet connection. Cache at ~/.cache/huggingfac
 CORS error: check ALLOWED_ORIGINS in backend/.env includes your frontend port
 LLM 503: run `ollama serve` then `ollama pull tinyllama`
 Port 3000 in use: change port in frontend/vite.config.js and add it to ALLOWED_ORIGINS
-Leak search shows RISK-BASED results: Google/Bing blocked automated search in your region — intelligence estimates are shown instead of confirmed matches
+Leak search shows RISK-BASED results: Google/Bing blocked automated search in your region — intelligence estimates are shown instead of confirmed matches.
