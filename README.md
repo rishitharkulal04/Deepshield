@@ -346,7 +346,7 @@ https://github.com/rishitharkulal04
 
 If you enjoyed this project or found it useful, consider giving the repository a **⭐ Star**.
 
-Every star motivates us to build even better AI-powered cybersecurity solutions.
+Every star motivates us to build even better AI-powered cybersecurity solutions..
 
 ---
 
