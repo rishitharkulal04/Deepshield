@@ -1,132 +1,156 @@
-# DeepShield v8 — AI Deepfake Detection + Leak Finder
+# DEEPSHIELD
 
-> **Frontend:** v2.0 (React/Vite) — UI fully preserved
-> **Backend:** v8 (FastAPI, 4-signal ensemble) — enhanced for Gemini, DALL-E, Firefly, Midjourney
-> **New in v8:** Real content URLs in leak results · TinEye search · Edge/chroma forensic signals
+> AI-Powered Deepfake Detection • Leak Intelligence • Automated Legal Response
 
 ---
 
-## AI Detection Models (v8 Ensemble)
+## 📖 Overview
 
-| Model | Weight | Detects |
-|-------|--------|---------|
-| openai/clip-vit-large-patch14 | 50% | Gemini, DALL-E 3, Midjourney, Stable Diffusion, Firefly, Leonardo, Bing Image Creator |
-| dima806/deepfake_vs_real_image_detection | 25% | Face deepfakes, face-swaps (ViT FaceForensics++) |
-| Forensic Artifacts | 25% | ELA, DCT, Noise, Edge coherence, Chroma noise, Metadata, Texture |
-| Falconsai/nsfw_image_detection | Additive | Explicit / NSFW classification |
+DeepShield is an AI-powered cybersecurity platform that protects users from deepfakes, AI-generated explicit content, identity misuse, and image leaks.
 
-Total first-run download: ~2.1 GB (cached after first run)
+It combines AI-powered image forensics, reverse image intelligence, perceptual hashing, threat analysis, and automated legal response into one unified platform.
 
 ---
 
-## Leak Detection — Real Content URLs
+## ✨ Key Highlights
 
-Each leak result now shows:
-- CONTENT URL — the exact page where content was found
-- View Content Page button — opens the page directly
-- Report This Content — platform's abuse/report form
-- DMCA button — direct takedown form
-- Copy URL — for evidence documentation
-
-Search engines used (in order): Google Lens → Bing Visual Search → TinEye
-
----
-
-## Project Structure
-
-```
-DeepShield_Final/
-├── README.md
-├── frontend/
-│   ├── src/pages/        Scan.jsx  Assess.jsx  Legal.jsx  Dashboard.jsx  Landing.jsx
-│   ├── vite.config.js    proxies /api → localhost:8000
-│   ├── package.json
-│   └── .env
-└── backend/
-    ├── main.py           routes + CORS + .env
-    ├── ensemble.py       CLIP 50% + ViT 25% + Forensic 25%
-    ├── clip_model.py     CLIP ViT-L/14 + Gemini/DALL-E/Firefly prompts
-    ├── deepfake_model.py dima806 ViT deepfake detector
-    ├── artifact_model.py ELA/DCT/Noise/Edge/Chroma/Metadata
-    ├── deepfake_detector.py  analyze_image() entry + NSFW
-    ├── detection_models.py   ensemble_detection() wrapper
-    ├── web_scanner.py    Google+Bing+TinEye real reverse search
-    ├── threat_profiler.py
-    ├── llm_client.py
-    ├── reporting_takedown.py
-    ├── requirements.txt
-    └── .env
-```
+- 🔍 AI Deepfake Detection
+- 🚨 NSFW AI Content Detection
+- 🌐 Reverse Image & Leak Detection
+- 🧠 AI Threat Assessment
+- ⚖️ DMCA & Legal Document Generation
+- 👮 Police Complaint Generator
+- 🛡️ Continuous Monitoring Dashboard
+- 🔐 Privacy-First Architecture
 
 ---
 
-## Environment Variables
+## 🚀 Features
 
-backend/.env
-```
-PORT=8000
-ALLOWED_ORIGINS=http://localhost:3000,http://localhost:5173
-OLLAMA_URL=http://localhost:11434
-```
+### 🔍 AI Deepfake Detection
 
-frontend/.env
-```
-VITE_API_URL=http://localhost:8000
-```
+- Vision Transformer (ViT) based analysis
+- AI-generated image detection
+- Authenticity verification
+- Confidence scoring
+
+### 🚨 NSFW Detection
+
+- Explicit AI image detection
+- Image safety classification
+- Risk analysis
+
+### 🌐 Leak Intelligence
+
+- Reverse image search
+- Facial signature matching
+- Perceptual hash verification
+- Leak source identification
+
+### 🧠 Situation Assessment
+
+Describe any incident and DeepShield generates:
+
+- Threat Level
+- Risk Score
+- Spread Estimation
+- Recommended Actions
+- Legal Guidance
+
+### ⚖️ Legal Toolkit
+
+Generate professional legal documents including:
+
+- DMCA Takedown Notices
+- Police Reports
+- Platform Removal Requests
+- Legal Complaint Drafts
+
+### 🛡️ Continuous Monitoring
+
+- Upload reference images
+- Local perceptual hashing
+- Continuous monitoring
+- Privacy-first architecture
+- Instant threat alerts
 
 ---
 
-## Setup and Run
-
-### Requirements
-- Python 3.10+
-- Node.js 18+ and npm
-- pip
-
-### Backend
-```bash
-cd backend
-pip install -r requirements.txt
-python main.py
-```
-Backend: http://localhost:8000
-API docs: http://localhost:8000/docs
-Note: First run downloads ~2.1 GB of models automatically.
+## 🏗️ Tech Stack
 
 ### Frontend
-```bash
-cd frontend
-npm install
-npm run dev
-```
-Frontend: http://localhost:3000
 
-### Optional — Ollama LLM (for legal docs + threat analysis)
-```bash
-# Install: https://ollama.ai/download
-ollama serve
-ollama pull tinyllama    # fast, ~600 MB
-# or: ollama pull phi3  # better quality, ~2.3 GB
-```
-Without Ollama, image detection still works fully — only LLM text features are affected.
+- React.js
+- Vite
+- React Router
+- CSS3
+
+### Backend
+
+- FastAPI
+- Python
+- Uvicorn
+
+### AI Models
+
+- Vision Transformer (ViT)
+- Deepfake Detection Model
+- NSFW Detection Model
+- Perceptual Hash Matching
+- OCR Analysis
+
+### Intelligence Engine
+
+- Reverse Image Search
+- Leak Intelligence
+- Threat Profiling
+- Legal AI Assistant
 
 ---
 
-## API Endpoints
+## 📸 Project Screenshots
 
-GET  /api/health          backend health + model info
-POST /api/analyze         full pipeline: deepfake + NSFW + leaks + threat
-POST /api/assess          text threat assessment (LLM)
-POST /api/legal           generate legal document
-POST /api/legal/stream    streaming legal doc
-POST /api/action-plan     platform-specific action plan
+### Home Page
+
+(Add screenshots here)
+
+### Threat Assessment Dashboard
+
+(Add screenshots here)
+
+### Legal Toolkit
+
+(Add screenshots here)
 
 ---
 
-## Troubleshooting
+## 🛡️ Use Cases
 
-Models fail to download: check internet connection. Cache at ~/.cache/huggingface/
-CORS error: check ALLOWED_ORIGINS in backend/.env includes your frontend port
-LLM 503: run `ollama serve` then `ollama pull tinyllama`
-Port 3000 in use: change port in frontend/vite.config.js and add it to ALLOWED_ORIGINS
-Leak search shows RISK-BASED results: Google/Bing blocked automated search in your region — intelligence estimates are shown instead of confirmed matches.
+- Detect deepfake and manipulated images.
+- Identify leaked or misused content online.
+- Generate legal documents for reporting incidents.
+- Assess threats and receive AI-powered recommendations.
+- Monitor sensitive images securely.
+
+---
+
+## 👨‍💻 Team
+
+- Rishitha R
+- Team Members
+
+---
+
+## 🚀 Future Scope
+
+- Real-time web monitoring
+- Multilingual legal assistance
+- Cloud deployment
+- Mobile application support
+- Advanced AI models for detection
+
+---
+
+## 📄 License
+
+This project was developed as a hackathon project for educational and research purposes.
